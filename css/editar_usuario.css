@@ -1,0 +1,306 @@
+* {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/FONDO.jpg');
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Aside */
+aside {
+    background-color: #233544;
+    flex-direction: column;
+    color: #fff;
+    display: flex;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100px;
+}
+
+aside a {
+    transition: transform 0.5s ease;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+aside a:hover {
+    transform: scale(1.2);
+}
+
+aside a:active {
+    transform: scale(0.9);
+}
+
+aside a img {
+    height: 40px;
+    width: 40px;
+}
+
+aside a:first-of-type {
+    margin-bottom: auto;
+}
+
+/* Main */
+main {
+    background-color: #E0E0E0;
+    box-sizing: border-box;
+    margin: 10px auto;
+    display: grid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Inputs */
+main form .input-wrapper {
+    background-color: #233544;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+}
+
+main form .input-wrapper .input-icon {
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+}
+
+main form input::placeholder {
+    color: #E0E0E0;
+}
+
+main form input:focus {
+    outline: none;
+}
+
+main form input {
+    background-color: #233544 !important;
+    box-sizing: border-box;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+}
+
+main form input[type="checkbox"] {
+    transition: background-color 0.3s ease;
+    background-color: #233544;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    height: 20px;
+    width: 20px;
+}
+
+main form input[type="checkbox"]:checked {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+main form input[type="checkbox"]:checked::after {
+    text-align: center;
+    color: white;
+    display: block;
+    content: "✓";
+    line-height: 18px;
+    font-size: 16px;
+}
+
+main form .submit-container {
+    display: flex;
+    gap: 50px;
+}
+
+main form .submit-container button[type="submit"] {
+    background-color: #233544;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    height: 60px;
+    width: 150px;
+}
+
+main form .submit-container button[type="button"] {
+    background-color: #586B7C;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    height: 60px;
+    width: 150px;
+}
+
+main form .submit-container button[type="submit"]:hover,
+main form .submit-container button[type="button"]:hover {
+    transform: scale(1.1);
+}
+
+main form .submit-container button[type="submit"]:active,
+main form .submit-container button[type="button"]:active {
+    transform: scale(0.9);
+}
+
+/* Input containers */
+main form .input-container {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px;
+}
+
+main form .submit-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+main form label {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Imagen */
+main .imagen {
+    position: relative;
+}
+
+main .logo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+main .logo img {
+    transition: transform 0.5s ease;
+}
+
+main .logo img:hover {
+    transform: scale(1.1);
+}
+
+main .imagen {
+    overflow: hidden;
+}
+
+main .imagen img {
+    transition: transform 0.5s ease;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+main .imagen img:hover {
+    transform: scale(1.1);
+}
+
+/* Mensajes */
+.message-container {
+    margin-top: 20px;
+}
+
+.message-container .error,
+.message-container .editar {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.message-container .editar {
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Responsive */
+@media screen and (max-width: 750px) {
+    body {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    aside {
+        flex-direction: row;
+        overflow-x: auto;
+        box-shadow: none;
+        display: flex;
+        height: auto;
+        border-radius: 0;
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    aside a {
+        font-size: 14px;
+        margin: 5px 0;
+        padding: 8px;
+        flex: 1;
+    }
+
+    main {
+        box-shadow: none;
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    main .input-container,
+    main .submit-container {
+        margin: 10px 0;
+    }
+
+    main form input {
+        height: auto;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    main form button[type="submit"] {
+        height: auto;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    main .imagen {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+
+    main .logo {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    main .imagen img,
+    main .logo img {
+        height: auto;
+        max-width: 100%;
+    }
+}

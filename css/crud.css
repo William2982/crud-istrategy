@@ -1,0 +1,210 @@
+* {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main */
+body {
+    background-image: url('../assets/FONDO.jpg');
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Aside */
+aside {
+    background-color: #233544;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 200px;
+}
+
+aside button {
+    transition: transform 0.5s ease;
+    background-color: #cd3739;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+aside button:hover {
+    transform: scale(1.1);
+}
+
+aside button:active {
+    transform: scale(0.9);
+}
+
+aside a {
+    text-decoration: none;
+}
+
+.filtros {
+    font-weight: bold;
+    margin: 50px 0;
+}
+
+.filtros p {
+    margin: 20px 5px;
+}
+
+.filtros span {
+    background-color: #cd3739;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.add-filtro {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px 0;
+}
+
+/* Logo */
+.logo {
+    background-color: #233544;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.logo img {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    width: 200px;
+    height: 80px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo img:active {
+    transform: scale(0.9);
+}
+
+/* Table */
+table {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    font-weight: bold;
+    width: 100%;
+}
+
+th {
+    background-color: #cd3739;
+    border: 1px solid #000;
+    color: #ffffff;
+}
+
+th,
+td {
+    border-bottom: 2px solid #233544;
+    text-align: left;
+    padding: 10px;
+}
+
+tbody {
+    color: #000000 !important;
+}
+
+tbody form button img {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+/* Table DataTable */
+#tabla-usuarios_wrapper {
+    padding-top: 10px;
+    background-color: #233544;
+    color: #ffffff;
+}
+
+#tabla-usuarios_wrapper select {
+    background-color: #cd3739;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+}
+
+#tabla-usuarios_wrapper input {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* Tabla buttons */
+table #form-info button {
+    transition: transform 0.5s ease;
+    background-color: #cd3739;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+table #form-editar button,
+table #form-eliminar button {
+    transition: transform 0.5s ease;
+    background: none;
+    border: none;
+}
+
+table #form-info button:hover,
+table #form-editar button:hover,
+table #form-eliminar button:hover {
+    transform: scale(1.1);
+}
+
+table #form-info button:active,
+table #form-editar button:active,
+table #form-eliminar button:active {
+    transform: scale(0.9);
+}
+
+/* Responsive screen */
+@media screen and (max-width: 750px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        box-shadow: none;
+        position: relative;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    aside button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    table {
+        white-space: nowrap;
+        overflow-x: auto;
+        display: block;
+    }
+}
